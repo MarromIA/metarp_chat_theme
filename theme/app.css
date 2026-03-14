@@ -1,0 +1,255 @@
+* {
+    font-family: var(--font-family) !important;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.chat-window {
+    height: 35% !important;
+    max-width: 400px !important;
+    background: inherit !important;
+}
+
+.chat-messages {
+    height: 100%;
+    margin: 0;
+    font-size: inherit;
+    color: var(--faint-color);
+}
+
+.msg {
+    margin: 0.25rem 0;
+}
+
+/* position:relative is required for .msg-time absolute positioning */
+.message-wrapper {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    /* Extra bottom padding reserves space for the timestamp */
+    padding: 0.6rem 1rem 0.5rem 1rem;
+    overflow-wrap: anywhere;
+    width: fit-content;
+
+    background-color: var(--main-color);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+}
+
+.alt {
+    background-image: var(--message-icon-url);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1rem;
+    padding-left: 1.5rem;
+}
+
+.author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.console {
+    background-image: var(--console-icon-url);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1rem;
+    padding-left: 1.5rem;
+}
+
+.join {
+    background-image: var(--join-icon-url);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1rem;
+    padding-left: 1.5rem;
+}
+
+.quit {
+    background-image: var(--quit-icon-url);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1rem;
+    padding-left: 1.5rem;
+}
+
+.user {
+    background-image: var(--user-icon-url);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1rem;
+    padding-left: 1.5rem;
+}
+
+.print,
+.print * {
+    font-family: var(--console-font-family) !important;
+}
+
+.multiline {
+    margin-left: 0;
+    text-indent: 0;
+}
+
+.chat-input {
+    background-color: var(--main-color);
+    border-radius: 0.5rem;
+    top: 38% !important;
+    max-width: 400px !important;
+    font-size: inherit;
+}
+
+.chat-input > div.input {
+    align-items: center;
+    transform: translateX(-1px);
+    background-color: var(--main-color);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+}
+
+textarea {
+    display: block;
+    min-height: 100% !important;
+    padding: 0;
+    padding-left: 0.75rem;
+    resize: none;
+    box-sizing: content-box;
+    line-height: 1.5rem;
+    font-size: inherit;
+    text-overflow: ellipsis;
+    color: var(--text-color);
+    border-width: 0;
+}
+
+.chat-input > div.input::after {
+    content: '';
+    height: 2.5rem;
+    width: 2.5rem;
+    background-image: var(--input-icon-url);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.25rem;
+}
+
+.prefix {
+    height: fit-content;
+    margin: 0;
+    padding-left: 1rem;
+    line-height: 1rem;
+    font-size: inherit;
+}
+
+.suggestions {
+    padding: 0.25rem 0.75rem;
+    font-size: inherit;
+    color: var(--text-color);
+    background-color: var(--main-color);
+    border-radius: 0.5rem;
+}
+
+.help {
+    color: var(--faint-color);
+    font-weight: normal;
+}
+
+.disabled {
+    color: var(--faint-color);
+    font-weight: normal;
+}
+
+.suggestion {
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.suggestion * {
+    font-family: var(--suggestion-font-family) !important;
+}
+
+.chat-hide-state {
+    position: absolute;
+}
+
+.command-msg {
+    border-left: 4px solid #430b0f;
+    padding-left: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ============================================================================
+   TAGGED MESSAGES (colored sidebar)
+   ============================================================================ */
+
+.msg-tagged {
+    flex-direction: row !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    overflow: hidden;
+}
+
+.msg-tag {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0.5rem;
+    flex-shrink: 0;
+    background-color: var(--tag-fallback-color);
+}
+
+.msg-twt      .msg-tag { background-color: var(--tag-twt-color); }
+.msg-anon     .msg-tag { background-color: var(--tag-anon-color); }
+.msg-do       .msg-tag { background-color: var(--tag-do-color); }
+.msg-me       .msg-tag { background-color: var(--tag-me-color); }
+.msg-ooc      .msg-tag { background-color: var(--tag-ooc-color); }
+.msg-pm       .msg-tag { background-color: var(--tag-pm-color); }
+.msg-gh       .msg-tag { background-color: var(--tag-gh-color); }
+.msg-fallback .msg-tag { background-color: var(--tag-fallback-color); }
+.msg-print    .msg-tag { background-color: var(--tag-print-color); }
+
+/* Content area inside tagged messages.
+   Bottom padding makes room for the timestamp without overlap. */
+.msg-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+}
+
+/* ============================================================================
+   MESSAGE TIMESTAMP
+   Anchored to bottom-right of each bubble.
+   The padding-bottom on .message-wrapper and .msg-content reserves the space.
+   ============================================================================ */
+
+.msg-time {
+    position: absolute;
+    bottom: 0.3rem;
+    right: 0.5rem;
+    font-size: 0.6rem;
+    color: var(--faint-color);
+    letter-spacing: 0.03em;
+    pointer-events: none;
+    line-height: 1;
+    opacity: 0.6;
+}

@@ -1,0 +1,47 @@
+{
+    "errors": {
+        "no_permission":        "No tienes permisos para usar este comando",
+        "invalid_usage":        "Uso incorrecto del comando",
+        "no_phone":             "Necesitas un celular para usar este comando",
+        "player_dead":          "No puedes usar este comando estando muerto",
+        "cooldown_active":      "Cooldown activo: {remaining}s restantes",
+        "not_in_faction":       "No perteneces a esta facción",
+        "player_not_found":     "Jugador no encontrado",
+        "insufficient_funds":   "Fondos insuficientes. Necesitas ${amount}",
+        "payment_failed":       "Error al cobrar. Intenta de nuevo",
+        "job_not_whitelisted":  "Tu trabajo no tiene acceso a este comando",
+        "no_job":               "No tienes un trabajo asignado",
+        "message_too_long":     "El mensaje es muy largo (máximo {max} caracteres)",
+        "system_disabled":      "Este sistema está deshabilitado",
+        "framework_error":      "Error de framework. Contacta un administrador",
+        "invalid_target":       "ID de jugador inválido",
+        "target_offline":       "El jugador objetivo no está conectado"
+    },
+    "success": {
+        "message_sent":         "Mensaje enviado correctamente",
+        "tweet_sent":           "Tweet publicado exitosamente",
+        "anon_sent":            "Mensaje anónimo enviado (-${cost})",
+        "pm_sent":              "Mensaje privado enviado a {name}",
+        "announcement_sent":    "Anuncio enviado a todos los jugadores",
+        "faction_sent":         "Mensaje enviado a {count} miembro(s) de {faction}",
+        "job_sent":             "Mensaje enviado a {count} miembro(s) de {job}"
+    },
+    "info": {
+        "pm_received":          "Mensaje privado recibido de {name}",
+        "ooc_proximity":        "OOC (Proximidad)",
+        "ooc_global":           "OOC GLOBAL"
+    },
+    "usage": {
+        "do":       "Uso: /do [mensaje]",
+        "me":       "Uso: /me [mensaje]",
+        "ooc":      "Uso: /ooc [mensaje]",
+        "twt":      "Uso: /twt [mensaje]",
+        "anon":     "Uso: /anon [mensaje]",
+        "police":   "Uso: /police [mensaje]",
+        "ems":      "Uso: /ems [mensaje]",
+        "mechanic": "Uso: /mechanic [mensaje]",
+        "job":      "Uso: /job [mensaje]",
+        "pm":       "Uso: /pm [ID] [mensaje]",
+        "gh":       "Uso: /gh [mensaje]"
+    }
+}

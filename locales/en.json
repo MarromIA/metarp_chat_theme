@@ -1,0 +1,47 @@
+{
+    "errors": {
+        "no_permission":        "You don't have permission to use this command",
+        "invalid_usage":        "Invalid command usage",
+        "no_phone":             "You need a phone to use this command",
+        "player_dead":          "You cannot use this command while dead",
+        "cooldown_active":      "Cooldown active: {remaining}s remaining",
+        "not_in_faction":       "You don't belong to this faction",
+        "player_not_found":     "Player not found",
+        "insufficient_funds":   "Insufficient funds. You need ${amount}",
+        "payment_failed":       "Payment error. Please try again",
+        "job_not_whitelisted":  "Your job doesn't have access to this command",
+        "no_job":               "You don't have a job assigned",
+        "message_too_long":     "Message is too long (max {max} characters)",
+        "system_disabled":      "This system is disabled",
+        "framework_error":      "Framework error. Contact an administrator",
+        "invalid_target":       "Invalid player ID",
+        "target_offline":       "Target player is not connected"
+    },
+    "success": {
+        "message_sent":         "Message sent successfully",
+        "tweet_sent":           "Tweet published successfully",
+        "anon_sent":            "Anonymous message sent (-${cost})",
+        "pm_sent":              "Private message sent to {name}",
+        "announcement_sent":    "Announcement sent to all players",
+        "faction_sent":         "Message sent to {count} member(s) of {faction}",
+        "job_sent":             "Message sent to {count} member(s) of {job}"
+    },
+    "info": {
+        "pm_received":          "Private message received from {name}",
+        "ooc_proximity":        "OOC (Proximity)",
+        "ooc_global":           "OOC GLOBAL"
+    },
+    "usage": {
+        "do":       "Usage: /do [message]",
+        "me":       "Usage: /me [message]",
+        "ooc":      "Usage: /ooc [message]",
+        "twt":      "Usage: /twt [message]",
+        "anon":     "Usage: /anon [message]",
+        "police":   "Usage: /police [message]",
+        "ems":      "Usage: /ems [message]",
+        "mechanic": "Usage: /mechanic [message]",
+        "job":      "Usage: /job [message]",
+        "pm":       "Usage: /pm [ID] [message]",
+        "gh":       "Usage: /gh [message]"
+    }
+}
