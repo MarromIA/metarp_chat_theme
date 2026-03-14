@@ -94,9 +94,3 @@ metarp_chat/
 │   └── es.json
 └── fxmanifest.lua
 ```
-
----
-
-## License
-
-MIT
